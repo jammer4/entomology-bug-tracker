@@ -3,8 +3,8 @@ import '../styles/DevBugCard.css';
 
 function DevBugCard(props) {
     const bugID = props.bug._id;
-    const deleteUrl = `http://localhost:3001/api/bugs/${bugID}`;
-    const squashedUrl = 'http://localhost:3001/api/deadBugs';
+    const deleteUrl = `https://entomology-bug-tracker.herokuapp.com/api/bugs/${bugID}`;
+    const squashedUrl = 'https://entomology-bug-tracker.herokuapp.com/api/deadBugs';
     
     async function squash() {
         await axios.delete(deleteUrl);
