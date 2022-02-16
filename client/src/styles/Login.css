@@ -1,0 +1,42 @@
+.login {
+    width: 100vw;
+    height: 100vh;
+}
+
+.login-form-container {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.login-form-container form input {
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    border: solid #333 2px;
+    border-radius: 5px;
+    width: 50%;
+    height: 50px;
+    background-color: rgb(218, 218, 218);
+    color: #333;
+    font-size: 20px;
+}
+
+.login-form-container form button {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background-color: lightgreen;
+    width: 100px;
+    height: 60px;
+    border-radius: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+}
+
+.users {
+    text-align: center;
+    color: lightgreen;
+}

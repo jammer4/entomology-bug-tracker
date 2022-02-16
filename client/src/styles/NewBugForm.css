@@ -1,0 +1,51 @@
+.new-bug-form {
+    width: 60%;
+    margin-left: 20%;
+    float: left;
+    border: solid;
+    border-radius: 5px;
+    background-color: white;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.new-bug-form label {
+    display: inline-block;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.new-bug-form textarea {
+    border: solid #333 2px;
+    border-radius: 5px;
+    width: 50%;
+    height: 50px;
+    background-color: rgb(218, 218, 218);
+    color: #333;
+}
+
+.new-bug-form select {
+    border: solid #333 2px;
+    border-radius: 5px;
+    width: 50%;
+    height: 50px;
+    background-color: rgb(218, 218, 218);
+    color: #333;
+    text-align: center;
+}
+
+.new-bug-form button {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background-color: lightgreen;
+    width: 100px;
+    height: 60px;
+    border-radius: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+}
+
+

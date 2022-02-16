@@ -1,0 +1,9 @@
+.my-bugs-list {
+    width: 60%;
+    margin-left: 20%;
+    float: left;
+    border: solid;
+    border-radius: 5px;
+    background-color: white;
+    text-align: left;
+}

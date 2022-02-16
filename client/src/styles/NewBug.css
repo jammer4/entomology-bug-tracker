@@ -1,0 +1,11 @@
+.new-bug {
+    width: 75%;
+    height: 100vh;
+    margin-top: 30px;
+    float: left;
+    text-align: center;
+}
+
+.new-bug h1 {
+    font-size: 30px;
+}
