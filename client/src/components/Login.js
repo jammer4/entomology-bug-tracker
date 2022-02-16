@@ -8,7 +8,7 @@ function Login(props) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const userUrl = `http://localhost:3001/api/users/${username}`;
+    const userUrl = `https://entomology-bug-tracker.herokuapp.com/api/users/${username}`;
     
     async function login() {
         console.log(userUrl);
