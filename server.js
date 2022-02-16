@@ -27,17 +27,16 @@ async function connectToDB() {
 
 connectToDB();
 
+app.use('/api/users', users);
+app.use('/api/bugs', bugs);
+app.use('/api/deadBugs', deadBugs);
+
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
     
     app.get("*", (req, res) => {
         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     });
-}
-else {
-    app.use('/api/users', users);
-    app.use('/api/bugs', bugs);
-    app.use('/api/deadBugs', deadBugs);
 }
 
 app.listen(process.env.PORT || 3001);
