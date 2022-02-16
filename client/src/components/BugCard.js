@@ -19,7 +19,7 @@ function BugCard(props) {
         <div className="bug-card">
             <p>Description: {props.bug.description}</p>
             <p>Priority: {props.bug.priority}</p>
-            <p>DeveloperID: {devName}</p>
+            <p>Developer: {devName}</p>
         </div>
     );
 }
