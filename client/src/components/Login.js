@@ -28,7 +28,7 @@ function Login(props) {
                 <form>
                     <input type="text" placeholder="Username" onChange={e => setUsername(e.target.value)}/>
                     <input type="text" placeholder="Password" onChange={e => setPassword(e.target.value)}/>
-                    <Link to="/" onClick={login}><button type="button">Login</button></Link>
+                    <button type="button" onClick={login}>Login</button>
                 </form>
             </div>
             <div className="users">
