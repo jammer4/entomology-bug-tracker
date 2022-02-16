@@ -6,7 +6,7 @@ import MyBugsList from './MyBugsList';
 import '../styles/MyBugs.css';
 
 function MyBugs(props) {  
-  const url = 'https://entomology-bug-tracker.herokuapp.com/api/bugs/';
+  const url = 'http://localhost:3001/api/bugs/';
   const [myBugs, setMyBugs] = useState([]);
 
   async function getMyBugs() {

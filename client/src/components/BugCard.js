@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import '../styles/BugCard.css';
 
 function BugCard(props) {
-    const userUrl = 'https://entomology-bug-tracker.herokuapp.com/api/users';
+    const userUrl = 'http://localhost:3001/api/users';
     const [devName, setDevName] = useState();
     
     async function getDevName() {

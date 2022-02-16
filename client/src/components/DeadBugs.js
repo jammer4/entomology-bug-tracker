@@ -5,7 +5,7 @@ import axios from 'axios';
 import '../styles/DeadBugs.css';
 
 function DeadBugs() {
-  const url = 'https://entomology-bug-tracker.herokuapp.com/api/deadBugs/';
+  const url = 'http://localhost:3001/api/deadBugs/';
   const [deadBugs, setDeadBugs] = useState([]);
 
   async function getDeadBugs() {

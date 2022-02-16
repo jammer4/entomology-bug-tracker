@@ -4,7 +4,7 @@ import axios from 'axios';
 import '../styles/DeadBugCard.css';
 
 function DeadBugCard(props) {
-    const userUrl = 'https://entomology-bug-tracker.herokuapp.com/api/users';
+    const userUrl = 'http://localhost:3001/api/users';
     const [devName, setDevName] = useState();
     
     async function getDevName() {

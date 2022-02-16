@@ -6,7 +6,7 @@ import BugList from './BugList';
 import '../styles/LiveBugs.css';
 
 function LiveBugs() {  
-  const url = 'https://entomology-bug-tracker.herokuapp.com/api/bugs/';
+  const url = 'http://localhost:3001/api/bugs/';
   const [liveBugs, setLiveBugs] = useState([]);
 
   async function getLiveBugs() {

@@ -8,7 +8,7 @@ function NewBugForm() {
     const [devID, setDevID] = useState('6202a5beb555f18321504fdf');
     const [userList, setUserList] = useState([]);
 
-    const bugUrl = 'https://entomology-bug-tracker.herokuapp.com/api/bugs';
+    const bugUrl = 'http://localhost:3001/api/bugs';
     
     async function submitBug() {
         await axios.post(bugUrl, {
@@ -18,7 +18,7 @@ function NewBugForm() {
         })
     }
 
-    const userUrl = 'https://entomology-bug-tracker.herokuapp.com/api/users';
+    const userUrl = 'http://localhost:3001/api/users';
 
     async function getUsers() {
         const response = await axios.get(userUrl);
