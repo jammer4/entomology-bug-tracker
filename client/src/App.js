@@ -2,7 +2,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import React, { useState } from "react";
+import React, { createContext, useState } from "react";
 
 import SideNav from './components/SideNav';
 import LiveBugs from './components/LiveBugs';
@@ -11,30 +11,33 @@ import NewBug from './components/NewBug';
 import MyBugs from "./components/MyBugs";
 import Profile from './components/Profile';
 import Login from "./components/Login";
-import { UserContext } from "./context/UserContext";
 
 import './App.css';
 
-function App() {  
-  const [userType, setUserType] = useState('Developer');
+export const UserContext = createContext({});
+
+export function App() {  
   const [loggedIn, setLoggedIn] = useState(false);
-  const [name, setName] = useState('');
-  const [userID, setUserID] = useState('');
+  const [user, setUser] = useState({
+    userType: '',
+    name: '',
+    userID: ''
+  });
 
   if (!loggedIn) {
-    return <Login setLoggedIn={setLoggedIn} setUserType={setUserType} setName={setName} setUserID={setUserID}/>;
+    return <Login setLoggedIn={setLoggedIn} setUser={setUser} />;
   }
 
   return (
-    <UserContext.Provider value={userType}>
+    <UserContext.Provider value={user}>
       <div className="App">
         <SideNav />
         <Routes>
           <Route path="/" element={<LiveBugs />} />
-          {userType === 'Submitter' ? <Route path="/new-bug" element={<NewBug />} /> :
-            <Route path="/my-bugs" element={<MyBugs userID={userID}/>} />}
+          {user.userType === 'Submitter' ? <Route path="/new-bug" element={<NewBug />} /> :
+            <Route path="/my-bugs" element={<MyBugs />} />}
           <Route path="/dead-bugs" element={<DeadBugs />} />
-          <Route path="/profile" element={<Profile setLoggedIn={setLoggedIn} name={name} />} />
+          <Route path="/profile" element={<Profile setLoggedIn={setLoggedIn} />} />
         </Routes>
       </div>
     </UserContext.Provider>

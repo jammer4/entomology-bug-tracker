@@ -11,13 +11,14 @@ function Login(props) {
     const userUrl = `https://entomology-bug-tracker.herokuapp.com/api/users/${username}`;
     
     async function login() {
-        console.log(userUrl);
         const user = await axios.get(userUrl);
         if (user.data[0].password === password) {
             props.setLoggedIn(true);
-            props.setName(user.data[0].name);
-            props.setUserType(user.data[0].role);
-            props.setUserID(user.data[0]._id);
+            props.setUser({
+                userType: user.data[0].role,
+                name: user.data[0].name,
+                userID: user.data[0]._id
+            })
         }
     }
 
